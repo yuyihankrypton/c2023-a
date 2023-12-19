@@ -2,7 +2,9 @@ project(level1)
 
 add_executable(p01_running_letter p01_running_letter/main.c)
 
-add_executable(p02_is_prime p02_is_prime/main.c)
+add_executable(p02_is_prime p02_is_prime/main.c
+        p02_is_prime/IsPrime.c
+        p02_is_prime/prime.h)
 
 add_executable(p03_all_primes p03_all_primes/main.c)
 
@@ -19,3 +21,7 @@ add_executable(p08_push_boxes p08_push_boxes/main.c)
 add_executable(p09_linked_list p09_linked_list/main.c)
 
 add_executable(p10_warehouse p10_warehouse/main.c)
+
+find_package(raylib CONFIG REQUIRED)
+add_executable(p11_gobang p11_gobang/main.c)
+target_link_libraries(p11_gobang PRIVATE raylib)

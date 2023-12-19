@@ -1,6 +1,9 @@
-#include <printf.h>
-
+#include <stdio.h>
+#include <math.h>
+#include "prime.h"
 int main() {
-    printf("hello world!\n");
+    int n;
+    scanf("%d",&n);
+    isPrime(n);
     return 0;
 }
